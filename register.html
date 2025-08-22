@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Admin Account - Movers Institute</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/register.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="register-container">
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+        
+        <div class="page-header">
+            <div class="logo">MIT</div>
+            <h1>Create Admin Account</h1>
+            <p>Set up your administrator account for Movers Institute</p>
+        </div>
+
+        <form class="register-form" id="registerForm">
+            <!-- Personal Information -->
+            <div class="form-section">
+                <h3>Administrator Information</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="admin@moversinstitute.edu" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department/Role *</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="admissions">Admissions Office</option>
+                        <option value="registrar">Registrar Office</option>
+                        <option value="it">IT Department</option>
+                        <option value="academic">Academic Affairs</option>
+                        <option value="student-services">Student Services</option>
+                        <option value="super-admin">Super Administrator</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Account Setup -->
+            <div class="form-section">
+                <h3>Account Credentials</h3>
+                
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a unique username" required>
+                    <small>Username must be at least 4 characters and contain only letters and numbers</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <div class="password-field">
+                        <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                        <span class="password-toggle" onclick="togglePassword('password')">👁️</span>
+                    </div>
+                    <small>Password must be at least 8 characters with uppercase, lowercase, and numbers</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <div class="password-field">
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                        <span class="password-toggle" onclick="togglePassword('confirmPassword')">👁️</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Setup -->
+            <div class="form-section">
+                <h3>Security Information</h3>
+                
+                <div class="form-group">
+                    <label for="securityQuestion">Security Question *</label>
+                    <select id="securityQuestion" name="securityQuestion" required>
+                        <option value="">Select a security question</option>
+                        <option value="pet">What was the name of your first pet?</option>
+                        <option value="school">What elementary school did you attend?</option>
+                        <option value="city">In what city were you born?</option>
+                        <option value="mother">What is your mother's maiden name?</option>
+                        <option value="car">What was the make of your first car?</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="securityAnswer">Security Answer *</label>
+                    <input type="text" id="securityAnswer" name="securityAnswer" placeholder="Enter your answer" required>
+                </div>
+            </div>
+
+            <!-- Terms and Submit -->
+            <div class="form-section">
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms and Conditions and Privacy Policy *</label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="adminCode" name="adminCode" required>
+                    <label for="adminCode">I have been authorized to create an administrator account *</label>
+                </div>
+            </div>
+
+            <button type="submit" class="register-btn">Create Admin Account</button>
+        </form>
+
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script src="../assets/js/register.js"></script>
+</body>
+</html>

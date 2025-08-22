@@ -1,0 +1,328 @@
+/* Global Styles for Movers School Registration System */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5c842 0%, #f4a842 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Welcome Page Styles */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-section {
+    margin-bottom: 50px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #f5c842, #f4a842);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(245, 200, 66, 0.4);
+    border: 4px solid white;
+}
+
+.logo-img {
+    width: 120px;       /* adjust size */
+    height: auto;       /* keep aspect ratio */
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 50%;   /* makes it circular, optional */
+    box-shadow: 0 10px 30px rgba(245, 200, 66, 0.4);
+    border: 4px solid white; /* keeps the nice border like your old .logo */
+}
+
+
+.welcome-container h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+}
+
+/* Navigation Cards */
+.navigation-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.admin-only {
+    max-width: 350px;
+}
+
+.nav-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.nav-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.nav-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.nav-card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #f5c842, #f4a842);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 200, 66, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.btn-admin {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+    color: white;
+}
+
+.btn-admin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+}
+
+/* Common Form Styles */
+.form-container {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #f5c842, #f4a842, #e8b339);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f5c842;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(245, 200, 66, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+/* Error and Success Messages */
+.message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.error-message {
+    background: #ffe6e6;
+    color: #d32f2f;
+    border: 1px solid #ffcdd2;
+}
+
+.success-message {
+    background: #e8f5e8;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+/* Page Headers */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #f5f5f5;
+    color: #666;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-container h1 {
+        font-size: 24px;
+    }
+    
+    .tagline {
+        font-size: 16px;
+    }
+    
+    .navigation-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .nav-card {
+        padding: 25px 20px;
+    }
+    
+    .form-container {
+        margin: 20px;
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+    
+    .welcome-container h1 {
+        font-size: 20px;
+    }
+    
+    .nav-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

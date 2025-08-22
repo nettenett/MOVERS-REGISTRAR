@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Movers Institute</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-section">
+    <img src="../assets/images/logo.png" alt="Movers Institute Logo" class="logo-img">
+    <h1 class="institute-name">Movers Institute of Technology and Education</h1>
+    <p class="tagline">Registrar Cashier Portal</p>
+</div>
+
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-field">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                </div>
+            </div>
+
+            <button type="submit" class="login-btn">Log In</button>
+
+           <div class="create-account">
+    <a href="register.html" class="create-btn">Create an account</a>
+</div>
+
+
+        </form>
+
+    </div>
+
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>
